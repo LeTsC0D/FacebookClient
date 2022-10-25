@@ -15,7 +15,7 @@ export default function Login() {
     async function abc(){
       dispatch({ type: "LOGIN_START" });
       try {
-        const res = await axios.post("/auth/login", { email: email.current.value, password: password.current.value });
+        const res = await axios.post("https://facebookapii.herokuapp.com/api/auth/login", { email: email.current.value, password: password.current.value });
         dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
       } catch (err) {  
       dispatch({ type: "LOGIN_FAILURE", payload: err });
