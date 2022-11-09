@@ -4,6 +4,7 @@ import Profile from "./pages/profile/Profile";
 import Register from "./pages/register/Register";
 import Messenger from "./pages/messenger/Messenger"
 // import { Redirect } from "react-router"
+// import Messenger from "./pages/messeng/Messenger";
 import {
   BrowserRouter as Router,
   Route,
@@ -31,9 +32,9 @@ function App() {
         {/* <Route path="/register" element={<Register />}>
          
         </Route> */}
-        <Route path="/messenger" element={<Messenger />}>
-        
+        <Route path="/messenger" element={<Messenger />}> 
         </Route>
+        {/* <Route path="/messenge" element={<Messenger />}> </Route> */}
         <Route path="/profile/:username" element={<Profile />}>
          
         </Route>

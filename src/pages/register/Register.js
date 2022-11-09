@@ -22,7 +22,7 @@ export default function Register() {
         password: password.current.value,
       };
       try {
-        await axios.post("https://facebookapii.herokuapp.com/api/auth/register", user);
+        await axios.post("https://unique-lily-8a3ae4.netlify.app/api/auth/register", user);
         navigate("/login");
       } catch (err) {
         console.log(err);

@@ -13,7 +13,9 @@ export default function Profile() {
   const username = useParams().username;
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`https://facebookapii.herokuapp.com/api/users?username=${username}`);
+      // const res = await axios.get(`https://facebookapii.herokuapp.com/api/users?username=${username}`);
+
+      const res = await axios.get(`https://unique-lily-8a3ae4.netlify.app/api/users?username=${username}`);
       setUser(res.data);
       console.log(res.data)
     };

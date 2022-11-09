@@ -1,8 +1,9 @@
 import "./topbar.css";
 import { Search, Person, Chat, Notifications } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext";
 import { useContext } from "react";
+import { Link  } from "react-router-dom";
 
 export default function Topbar() {
   const { user } = useContext(AuthContext);
@@ -11,6 +12,9 @@ export default function Topbar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
+        {
+          console.log("hello"+user._id)
+        }
           <Link to="/" style={{ textDecoration: "none" }}>
           <span className="logo">Facebook</span>
           </Link>
@@ -35,7 +39,13 @@ export default function Topbar() {
             <span className="topbarIconBadge">1</span>
           </div>
           <div className="topbarIconItem">
-            <Chat />
+          {/* <li>
+          <Link to="/messenger">Message</Link>
+          </li>  */}
+          <Link to={'/messenger'} >
+          <Chat color='green'/>
+          </Link>
+            {/* <Chat  onClick={() => <Link to={'/messenger'} ></Link>}/> */}
             <span className="topbarIconBadge">2</span>
           </div>
           <div className="topbarIconItem">
