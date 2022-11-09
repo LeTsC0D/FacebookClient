@@ -19,7 +19,7 @@ export default function Post({ post }) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`https://unique-lily-8a3ae4.netlify.app/api/users?userId=${post.userId}`);
+      const res = await axios.get(`https://facebook-api-theta.vercel.app/api/users?userId=${post.userId}`);
       setUser(res.data);
     };
     fetchUser();
@@ -27,7 +27,7 @@ export default function Post({ post }) {
 
   const likeHandler = () => {
     try {
-      axios.put("https://unique-lily-8a3ae4.netlify.app/api/posts/" + post._id + "/like", { userId: currentUser._id });
+      axios.put("https://facebook-api-theta.vercel.app/api/posts/" + post._id + "/like", { userId: currentUser._id });
     } catch (err) {}
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);

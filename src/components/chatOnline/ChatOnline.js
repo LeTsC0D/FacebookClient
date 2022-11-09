@@ -9,7 +9,7 @@ export default function ChatOnline({ onlineUsers, currentId, setCurrentChat }) {
 
   useEffect(() => {
     const getFriends = async () => {
-      const res = await axios.get("https://unique-lily-8a3ae4.netlify.app/api/users/friends/" + currentId);
+      const res = await axios.get("https://facebook-api-theta.vercel.app/api/users/friends/" + currentId);
       setFriends(res.data);
     };
 

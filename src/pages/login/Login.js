@@ -16,7 +16,7 @@ export default function Login() {
       try {
         // const res = await axios.post("https://facebookapii.herokuapp.com/api/auth/login", { email: email.current.value, password: password.current.value });
 
-        const res = await axios.post("https://unique-lily-8a3ae4.netlify.app/api/auth/login", { email: email.current.value, password: password.current.value });
+        const res = await axios.post("https://facebook-api-theta.vercel.app/api/auth/login", { email: email.current.value, password: password.current.value });
         
         dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
         console.log(res)
